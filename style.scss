@@ -1,0 +1,132 @@
+$Darkcyan: hsl(158, 36%, 37%);
+$Cream: hsl(30, 38%, 92%);
+$Verydarkblue: hsl(212, 21%, 14%);
+$Darkgrayishblue: hsl(228, 12%, 48%);
+$White: hsl(0, 0%, 100%);
+
+$PrimaryFont: "Fraunces", serif;
+$SecondaryFont: "Montserrat", sans-serif;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  height: 100%;
+}
+body {
+  font-size: 14px;
+  background-color: $Cream;
+  position: relative;
+  height: 100%;
+  z-index: 1;
+  &::before {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    content: "";
+    background-image: url(./design/desktop-design.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.3;
+    pointer-events: none;
+  }
+}
+
+.container {
+  width: 1440px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.product-card {
+  width: 600px;
+  height: 450px;
+  background-color: $White;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.product-card__img {
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.product-card__info {
+  padding: 31px;
+}
+
+.product-card__category {
+  font-family: $SecondaryFont;
+  color: $Darkgrayishblue;
+  letter-spacing: 3.6px;
+  margin-bottom: 17px;
+  display: block;
+}
+
+.product-card__title {
+  font-family: $PrimaryFont;
+  color: $Verydarkblue;
+  font-size: 2.2em;
+  line-height: 1.1em;
+  margin-bottom: 20px;
+  word-spacing: -1px;
+}
+.product-card__subtitle {
+  font-family: $SecondaryFont;
+  color: $Darkgrayishblue;
+  line-height: 1.6em;
+  margin-bottom: 28px;
+}
+.product-card__prices {
+  display: flex;
+  align-items: center;
+  margin-bottom: 28px;
+}
+.product-card__prices-actual {
+  font-family: $PrimaryFont;
+  color: $Darkcyan;
+  font-size: 2.2em;
+}
+
+.product-card__prices-old {
+  margin-left: 24px;
+  font-family: $SecondaryFont;
+  color: $Darkgrayishblue;
+  text-decoration: line-through;
+}
+
+.product-card__btn {
+  background-color: $Darkcyan;
+  color: $White;
+  font-family: $SecondaryFont;
+  border: 0;
+  width: 100%;
+  border-radius: 10px;
+  padding: 14px;
+  cursor: pointer;
+  font-size: 1.12em;
+  word-spacing: -2px;
+  svg {
+    position: relative;
+    left: 0px;
+    margin-right: 10px;
+  }
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
